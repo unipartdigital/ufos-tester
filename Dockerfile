@@ -1,4 +1,5 @@
 FROM fedora:30
-RUN sudo dnf -y install gcc git python3-devel python-pip libpq-devel
+RUN dnf update -y
+RUN dnf -y install gcc git python3-devel python3-pip libpq-devel
 ADD requirements.txt /
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
